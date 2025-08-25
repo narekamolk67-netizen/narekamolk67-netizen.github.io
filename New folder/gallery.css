@@ -1,0 +1,111 @@
+* กำหนดสีของลิงก์ใน .nav-item */
+.nav-link {
+  color: white; /* เปลี่ยนสีของลิงก์ให้เป็นสีขาว */
+}
+
+/* เมื่อมีการ hover (ชี้เมาส์) ก็ให้ลิงก์เป็นสีขาว */
+.nav-link:hover {
+  color: gray; /* สีขาวเมื่อชี้เมาส์ */
+}
+
+/* ตั้งค่าทั่วไป */
+/* ตั้งค่าทั่วไป */
+.navbar {
+padding-left: 30px; /* เพิ่มระยะห่างทางด้านซ้าย */
+padding-right: 100px; /* เพิ่มระยะห่างทางด้านขวา */
+}
+
+/* ซ่อน navbar เมื่อเลื่อนลง */
+.navbar {
+transition: transform 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+transform: translateY(-100%); /* ซ่อน navbar ด้านบน */
+}
+
+.navbar-brand {
+margin-left: 30px; /* ถ้าต้องการเพิ่มระยะห่างเพิ่มเติมจากขอบ */
+}
+html {
+font-family: Arial, sans-serif; /* ฟอนต์เริ่มต้นสำหรับภาษาอังกฤษ */
+}
+
+body:lang(th) {
+font-family: 'Sarabun', sans-serif; /* ฟอนต์สำหรับภาษาไทย */
+}
+@font-face {
+font-family: 'MyThaiFont';
+src: url('IBMPlexSansThai-Bold.ttf') format('truetype');
+}
+
+body {
+font-family: 'MyThaiFont', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.image-container {
+    display: grid; /* ใช้ grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* จัดคอลัมน์แบบยืดหยุ่น */
+    gap: 20px; /* ช่องว่างระหว่างรูป */
+    justify-content: center; /* จัดให้คอลัมน์อยู่ตรงกลาง */
+    padding: 20px; /* เพิ่มพื้นที่รอบๆ container */
+    max-width: 1200px; /* จำกัดความกว้างสูงสุด */
+    margin: 0 auto; /* จัด container ให้อยู่ตรงกลาง */
+}
+
+.image-container img {
+    width: 100%; /* ปรับภาพให้เต็มความกว้างของ container */
+    height: auto; /* รักษาอัตราส่วนของภาพ */
+    border-radius: 10px; /* มุมมน */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* เงาเบาๆ */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    text-align: center; /* จัดตำแหน่งตัวอักษรให้อยู่ตรงกลาง */
+    color: #343a40;
+}
+/* กำหนดการตั้งค่าพื้นฐานสำหรับรูปภาพ */
+.image-container img {
+    width: 100%; /* เต็มความกว้างของคอลัมน์ */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+    transition: transform 0.3s ease; /* ใส่ animation สำหรับ hover */
+}
+
+/* รูปภาพขยายเมื่อเลื่อนเมาส์ผ่าน */
+.image-container img:hover {
+    transform: scale(1.1); /* ขยาย 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* เพิ่มเงาให้เข้มขึ้น */
+}
+/* ปรับขนาดของภาพใน modal */
+.modal-body img {
+    width: 100%; /* ทำให้ภาพกว้างเต็มพื้นที่ของ modal */
+    height: auto; /* ปรับความสูงอัตโนมัติให้เหมาะสม */
+    display: block; /* ทำให้ภาพถูกจัดให้อยู่ตรงกลาง */
+    margin: 0 auto; /* เซ็นเตอร์ภาพ */
+}
+/* ซ่อน navbar */
+.navbar.hidden {
+    transform: translateY(-100%);  /* ย้าย navbar ออกจากหน้าจอ */
+    transition: transform 0.3s ease-in-out; /* เพิ่มการเคลื่อนไหวเมื่อซ่อน navbar */
+  }
+  
+  /* ปรับการตั้งค่าพื้นฐานของ navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+  }
+  h1 {
+    margin-top: 60px; /* เพิ่มระยะห่างจากด้านบนสำหรับหัวข้อ */
+}
