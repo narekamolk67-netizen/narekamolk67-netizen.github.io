@@ -1,0 +1,195 @@
+/* ตั้งค่าเริ่มต้นให้กับทุกลิงก์ในเอกสาร */
+a {
+    text-decoration: none; /* เอาเส้นขีดใต้ของลิงก์ออก */
+  }
+  
+  /* กำหนดสีของลิงก์ใน .nav-item */
+  .nav-link {
+    color: white; /* เปลี่ยนสีของลิงก์ให้เป็นสีขาว */
+  }
+  
+  /* เมื่อมีการ hover (ชี้เมาส์) ก็ให้ลิงก์เป็นสีขาว */
+  .nav-link:hover {
+    color: gray; /* สีขาวเมื่อชี้เมาส์ */
+  }
+ 
+ /* ตั้งค่าทั่วไป */
+/* ตั้งค่าทั่วไป */
+.navbar {
+  padding-left: 30px; /* เพิ่มระยะห่างทางด้านซ้าย */
+  padding-right: 100px; /* เพิ่มระยะห่างทางด้านขวา */
+}
+
+/* ซ่อน navbar เมื่อเลื่อนลง */
+.navbar {
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%); /* ซ่อน navbar ด้านบน */
+}
+
+.navbar-brand {
+  margin-left: 30px; /* ถ้าต้องการเพิ่มระยะห่างเพิ่มเติมจากขอบ */
+}
+html {
+  font-family: Arial, sans-serif; /* ฟอนต์เริ่มต้นสำหรับภาษาอังกฤษ */
+}
+
+body:lang(th) {
+  font-family: 'Sarabun', sans-serif; /* ฟอนต์สำหรับภาษาไทย */
+}
+@font-face {
+  font-family: 'MyThaiFont';
+  src: url('IBMPlexSansThai-Bold.ttf') format('truetype');
+}
+
+body {
+  font-family: 'MyThaiFont', sans-serif;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ทำให้พื้นหลังเต็มจอ */
+.background-container {
+  position: sticky;           /* ใช้จัดการตำแหน่ง */
+  width: 100%;                  /* ขยายให้เต็มจอ */
+  height: 100vh;                /* ให้ความสูงเต็มหน้าจอ */
+  overflow: hidden;             /* ซ่อนส่วนที่เกิน */
+}
+
+.background-image {
+  width: 100%;                  /* ทำให้ภาพขยายเต็มความกว้าง */
+  height: 100%;                 /* ทำให้ภาพขยายเต็มความสูง */
+  object-fit: cover;            /* ให้ภาพครอบคลุมทุกด้านโดยไม่ผิดสัดส่วน */
+}
+
+/* จัดแถบเมนูด้านบนให้อยู่เหนือพื้นหลัง */
+nav {
+  position: absolute;           /* ให้แถบเมนูลอย */
+  top: 0;                       /* ยึดไว้ด้านบนสุด */
+  width: 100%;                  /* ครอบคลุมทั้งหน้าจอ */
+  z-index: 1;                   /* ให้แสดงอยู่เหนือภาพพื้นหลัง */
+  transition: opacity 0.5s ease; /* การค่อยๆ หายไป */
+}
+/* ส่วน About ครอบคลุมเต็มจอ */
+.about-section {
+  width: 100%;
+  min-height: 100vh; /* ให้เต็มความสูงของจอ */
+  background-color: rgb(0, 0, 0); /* สีพื้นหลังของ About */
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 2; /* อยู่ด้านบนโลโก้ */
+  margin-top: -vh; /* เลื่อน About ให้เริ่มทับโลโก้ */
+}
+
+.about-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+/* ตั้งค่าทั่วไปสำหรับลิงก์ในการ์ด */
+.card-link {
+  text-decoration: none; /* ลบขีดเส้นใต้ */
+  color: inherit; /* ใช้สีตามปกติ */
+}
+
+/* เมื่อชี้เมาส์ที่การ์ด */
+.card:hover {
+  transform: scale(1.05); /* ขยายการ์ดทั้งหมด */
+  transition: transform 0.3s ease; /* เพิ่มการเคลื่อนไหว */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้การ์ด */
+}
+
+/* ขยายรูปในการ์ดด้วย */
+.card-img-top {
+  transition: transform 0.3s ease; /* เพิ่มเอฟเฟกต์การเคลื่อนไหว */
+}
+
+/* ข้อความมีเส้นใต้เมื่อชี้เมาส์ */
+.card:hover .card-title,
+.card:hover .card-text {
+  text-decoration: underline;
+}
+
+/* ปรับให้การ์ดดูเหมือนคลิกได้ */
+.card {
+  cursor: pointer; /* เปลี่ยน cursor เป็นมือ */
+}
+/*หน้า About*/
+/* เพิ่มระยะห่างจากขอบจอซ้าย */
+
+.text-box {
+    margin: 20px; /* เพิ่มระยะห่างจากขอบ */
+    padding: 10px; /* เพิ่มระยะห่างภายใน */
+    border: 1px solid #ffffff; /* เส้นขอบ */
+    background-color: #ffffff; /* พื้นหลังสีอ่อน */
+    border-radius: 5px; /* มุมกล่องโค้ง */
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+}
+
+.text-box p {
+    margin: 0; /* เอาระยะห่างบน-ล่างออก */
+    text-align: justify; /* จัดข้อความให้ชิดขอบทั้งสอง */
+}
+
+.text-box span {
+    white-space: nowrap; /* บังคับให้ข้อความไม่ตัดบรรทัด */
+}
+
+.text-box img {
+    display: block; /* ทำให้รูปภาพอยู่บรรทัดเดียว */
+    margin: 10px auto; /* จัดให้อยู่กลาง */
+}
+
+.text-box .info {
+    margin-top: 10px;
+}
+.text-center-link {
+  display: block; /* ทำให้ลิงก์เป็น block element */
+  text-align: center; /* จัดข้อความให้อยู่กลาง */
+  font-size: 2rem; /* ขนาดตัวอักษรใหญ่ */
+  color: #010810; /* สีลิงก์ */
+  text-decoration: none; /* ลบขีดเส้นใต้ */
+  font-weight: bold; /* ตัวหนา */
+  margin: 20px 0; /* เพิ่มระยะห่างด้านบนและล่าง */
+}
+.text-center-link:hover {
+  text-decoration: underline; /* เพิ่มขีดเส้นใต้เมื่อ hover */
+  color: #6a7581; /* สีเมื่อชี้เมาส์ */
+}
+
+.link-image {
+  display: block; /* ทำให้ภาพครอบเต็มพื้นที่ลิงก์ */
+  margin: 10px auto; /* จัดให้อยู่กลาง */
+  width: 500px; /* กำหนดขนาดรูปภาพ */
+  border-radius: 10px; /* เพิ่มความโค้งมนให้รูปภาพ */
+  transition: transform 0.3s ease; /* เพิ่มเอฟเฟกต์เมื่อชี้เมาส์ */
+}
+
+.link-image:hover {
+  transform: scale(1.1); /* ขยายรูปภาพเมื่อชี้เมาส์ */
+}
+  /*Service*/
+  .text-link {
+    color: black; /* กำหนดสีของลิงก์เป็นสีดำ */
+    text-decoration: none; /* ลบเส้นขีดใต้ */
+}
+
+.text-link:hover {
+    text-decoration: underline; /* เพิ่มขีดเส้นใต้เมื่อชี้เมาส์ */
+}
+
+  
+
+
+  
